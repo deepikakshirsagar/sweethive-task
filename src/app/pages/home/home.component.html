@@ -1,15 +1,15 @@
 <div class="home-page">
     <div class="wrapper">
-        <div class="banner-section">
-            <img src="assets/images/course-image.png" alt="Course">
-            <div class="details-sections">
+        <div class="banner-section" fxLayout="row" >
+            <img src="assets/images/course-image.png" alt="Course" fxFlex="70">
+            <div class="details-section">
                 <h1>Influence without authority</h1>
-                <div>
-                    <img src="assets/images/place-image.png" alt="">
-                    <span>Berlitz</span>
+                <div class="berlitz-row" fxLayout fxLayoutGap="30px" >
+                    <img src="assets/images/place-image.png" alt="Berlitz">
+                    <span fxFlexAlign="center">Berlitz</span>
                 </div>
-                <div>
-                    <ul>
+                <div class="bottom-section" fxLayout="column" fxFlexAlign="end">
+                    <ul class="p-0" fxLayout>
                         <li>
                             <span class="label">DA: </span>
                             <span class="value">{{price | currency: 'EUR':'symbol'}}</span>

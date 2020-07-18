@@ -10,10 +10,13 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     color: #000;
 }
 
+/* Coomomn style  */
+
 .wrapper {
     width: 90%;
     margin: 0 auto;
 }
+
 .box-shadow {
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -22,3 +25,15 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
+.p-0 {
+    padding: 0;
+}
+
+.berlitz-row img {
+    width: 80px;
+}
+
+
+button {
+    color: red;
+}
