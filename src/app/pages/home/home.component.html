@@ -1,10 +1,10 @@
 <div class="home-page">
     <div class="wrapper">
         <div class="banner-section" fxLayout="row" >
-            <img src="assets/images/course-image.png" alt="Course" fxFlex="70">
+            <img src="assets/images/course-image.png" alt="Course" fxFlex="70" fxFlex.xs="100">
             <div class="details-section">
                 <h1>Influence without authority</h1>
-                <div class="berlitz-row" fxLayout fxLayoutGap="30px" >
+                <div class="berlitz-row" fxLayout fxLayoutGap="15px" >
                     <img src="assets/images/place-image.png" alt="Berlitz">
                     <span fxFlexAlign="center">Berlitz</span>
                 </div>
@@ -21,6 +21,40 @@
                     </ul>
                     <button mat-raised-button>Iscriviti</button>
                     <p>Paga con Carta di Credito o Bonifico Online. Hai un voucher?</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content" fxLayout fxLayout.md="column">
+            <div fxFlex="70" fxFlex.xs="100" fxLayoutGap="15px" fLayoutGap.xs="0">
+                <div>
+                    <h2>Descrizione</h2>
+                    <h3>Influencing Without Authority</h3>
+                    <h4>BERLITZ ONLINE LIVE SEMINARS: THREE HOURS THAT REALLY PAY OFF</h4>
+                    <p>Our recipe for success – intensive, interactive, virtual. Berlitz Online Live Seminars are the right choice for building valuable skills in the shortest possible amount of time. In just three hours, we achieve a lasting learning outcome. These two-part seminars take place live in the Virtual Classroom using Adobe Connect and a parallel telephone conference. Preparatory, interim, and follow-up exercises support the learning process, which is tailored to the seminar topic.</p>
+
+                    <p>This intensive online learning format has long since proven its success to numerous customers. As satisfied participants from 82 nations continuously affirm, Berlitz Online Live Seminars give you the necessary boost at the right time.</p>
+
+                    <p>These seminars are used to meet a variety of training needs – not only for targeted personal development. They are also ideal for companies offering continuing education to international teams, for global project rollouts, and as an economical alternative for employees short on time or without a budget for travel. In the English version, they are an outstanding means for simultaneously providing soft skills and language practice as a follow-up to a language course. There is a diversity of useful applications. Take advantage of the Berlitz Online Live Seminars to meet your continuing education needs!</p>
+                </div>
+
+                <div class="concept-section">
+                    <h5>Concept</h5>
+                    <ul class="p-0">
+                        <li *ngFor="let concept of conceptList">{{concept}}</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="event-details">
+                <div>
+                    <h6>PROSSIMA SESSIONE</h6>
+                    <p> dal 04.09.2019 al 11.09.2019</p>
+                </div>
+                <div>
+                    <h6> DOVE</h6>
+                    <p>Berlitz Language Center</p>
+                    <span>Via Larga 8, 20122 Milano, Lombardia, Italy</span>
                 </div>
             </div>
         </div>

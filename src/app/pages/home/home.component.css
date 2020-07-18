@@ -2,7 +2,6 @@
     background: #414141;
     padding: 15px;
     color: #fff;
-    position: relative;
 }
 
 h1 {
@@ -21,7 +20,7 @@ span.label {
 }
 
 span.value {
-    font-weight: 400;
+    font-weight: 700;
 }
 
 .details-section p {
@@ -31,4 +30,8 @@ span.value {
 
 .bottom-section {
     /* align-items: flex-end; */
+}
+
+.concept-section ul li {
+    margin-bottom: 12px;
 }
