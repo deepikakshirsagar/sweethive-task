@@ -1,13 +1,13 @@
-<header>
+<header class="box-shadow">
     
     <mat-toolbar color="primary">
         <div class="wrapper">
-            <mat-toolbar-row>
+            <mat-toolbar-row fxLayout="row" fxLayoutAlign="space-between center">
             
                 <a class="logo" mat-button [routerLink]="'/'"><img src="assets/images/wiredexperience.png" alt="Wired Experience" /></a>
-                <span class="menu-spacer"></span>
-                <div>
-                <a mat-button [routerLink]="'/'"> Home </a>
+                
+                <div class="menu-list">
+                <a mat-button [routerLink]="'/home'" routerLinkActive="active"> Home </a>
                 <a mat-button [routerLink]="'/test'"> Registrati </a>
                 <a mat-button [routerLink]="'/test'"> Accedi </a>
                 <!-- <a mat-button [routerLink]="'/create-contact'"> Create Contact </a>
@@ -15,7 +15,7 @@
                     <a mat-button [routerLink]="'/create-activity'"> Create Activity </a>       -->
                 </div>
                 
-                <button mat-icon-button>
+                <button class="menu-icon" mat-icon-button>
                     <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
                 </button>
         
