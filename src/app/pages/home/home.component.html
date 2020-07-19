@@ -21,7 +21,7 @@
                             <span class="value">{{duration}} HRS</span>
                         </li>
                     </ul>
-                    <button fxShow [fxHide.xs]="true" mat-raised-button>Iscriviti</button>
+                    <button fxShow [fxHide.xs]="true" mat-raised-button [routerLink]="'/subscribe'" >Iscriviti</button>
                     <p fxShow [fxHide.xs]="true" [ngClass.gt-xs]="'mb-0'">Paga con Carta di Credito o Bonifico Online. Hai un voucher?</p>
                 </div>
             </div>
@@ -62,7 +62,7 @@
         </div>
 
         <div fxHide [fxShow.xs]="true" class="footer-button box-shadow">
-            <button mat-raised-button>Iscriviti</button>
+            <button mat-raised-button [routerLink]="'/subscribe'" >Iscriviti</button>
         </div>
     </div>
 </div>

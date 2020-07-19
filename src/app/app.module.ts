@@ -8,12 +8,14 @@ import { AppMaterialModule } from './app-material/app-material.module';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
+import { SubscribeComponent } from './pages/subscribe/subscribe.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    SubscribeComponent
   ],
   imports: [
     BrowserModule,
