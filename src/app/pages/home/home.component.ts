@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   price = 133;
   duration = 3;
+  fromDate = '04.09.2019';
+  toDate = '11.09.2019';
 
   conceptList = ['Live seminars in the Virtual Classroom with Adobe Connect and separate telephone conference',
   'Intensive format for learning intercultural skills and management/leadership skills',

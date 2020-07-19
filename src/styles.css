@@ -29,15 +29,39 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     padding: 0;
 }
 
+.mb-0 {
+    margin-bottom: 0;
+}
+
 .berlitz-row img {
     width: 80px;
 }
 
 
-button {
-    color: red;
+button .mat-raised-button {
+    color: #af1a1a;
 }
 
 .main-content {
     padding-top: 64px;
+}
+
+h2 {
+    color: #af1a1a;
+}
+
+h4 {
+    margin-top: 10px;
+}
+
+h6 {
+    color: #8f8c8c;
+}
+
+.event-details p {
+    margin-top: 5px;
+}
+
+.event-details span.address {
+    font-size: 0.7rem ;
 }

@@ -2,6 +2,7 @@
     background: #414141;
     padding: 15px;
     color: #fff;
+    position: relative;
 }
 
 h1 {
@@ -29,7 +30,13 @@ span.value {
 }
 
 .bottom-section {
-    /* align-items: flex-end; */
+    position: absolute;
+    bottom: 6px;
+    margin-right: 15px;
+}
+
+.concept-section {
+    margin-top: 35px;
 }
 
 .concept-section ul li {
