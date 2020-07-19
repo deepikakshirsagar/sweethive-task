@@ -1,6 +1,5 @@
 .details-section {
     background: #414141;
-    padding: 15px;
     color: #fff;
     position: relative;
 }
@@ -16,14 +15,6 @@ h1 {
     margin-top: 0;
 }
 
-ul li {
-    margin-right: 15px;
-    list-style-type: none;
-}
-
-span.label {
-
-}
 
 span.value {
     font-weight: 700;

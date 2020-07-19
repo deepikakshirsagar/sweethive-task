@@ -68,3 +68,12 @@ h6 {
 .event-details span.address {
     font-size: 0.7rem ;
 }
+
+.banner-section ul li {
+    margin-right: 15px;
+    list-style-type: none;
+}
+
+.details-section {
+    padding: 15px;
+}
