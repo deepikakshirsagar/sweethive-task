@@ -33,7 +33,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     margin-bottom: 0;
 }
 
-.berlitz-row img {
+.details-section .berlitz-row img {
     width: 80px;
 }
 

@@ -5,6 +5,11 @@
     position: relative;
 }
 
+
+/* .banner-section img {
+    width: 100%;
+} */
+
 h1 {
     text-transform: capitalize;
     font-size: 1.5rem;
@@ -30,7 +35,7 @@ span.value {
 }
 
 .bottom-section {
-    position: absolute;
+    /* position: absolute; */
     bottom: 6px;
     margin-right: 15px;
 }
@@ -41,4 +46,11 @@ span.value {
 
 .concept-section ul li {
     margin-bottom: 12px;
+}
+
+.positioned-details-section {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
 }

@@ -1,14 +1,16 @@
 <div class="home-page">
     <div class="wrapper">
-        <div class="banner-section" fxlayout>
-            <img src="assets/images/course-image.png" alt="Course" [fxFlex.lg]="'70'">
-            <div class="details-section">
+        <div class="banner-section" fxLayout="column" [fxLayout.gt-xs]="'row'" [ngStyle.sm]="{position: 'relative'}">
+            
+            <img src="assets/images/course-image.png" alt="Course" fxFlex="100" [fxFlex.gt-sm]="'70'" />
+            
+            <div class="details-section" fxFlex="100" [fxFlex.gt-sm]="30" [ngClass.sm]="'positioned-details-section'">
                 <h1>Influence without authority</h1>
                 <div class="berlitz-row" fxLayout fxLayoutGap="15px" >
                     <img src="assets/images/place-image.png" alt="Berlitz">
                     <span fxFlexAlign="center">Berlitz</span>
                 </div>
-                <div class="bottom-section" fxLayout="column" fxFlexAlign="end">
+                <div class="bottom-section" fxLayout="column" fxFlexAlign="end" [ngStyle.gt-xs]="{position: 'absolute'}">
                     <ul class="p-0" fxLayout>
                         <li>
                             <span class="label">DA: </span>
@@ -20,7 +22,7 @@
                         </li>
                     </ul>
                     <button mat-raised-button>Iscriviti</button>
-                    <p [fxHide.xs]="true">Paga con Carta di Credito o Bonifico Online. Hai un voucher?</p>
+                    <p fxShow [fxHide.xs]="true">Paga con Carta di Credito o Bonifico Online. Hai un voucher?</p>
                 </div>
             </div>
         </div>
