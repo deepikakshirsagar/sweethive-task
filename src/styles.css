@@ -37,6 +37,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     width: 80px;
 }
 
+.content {
+    padding: 0 10px 6rem;
+}
 
 button .mat-raised-button {
     color: #af1a1a;

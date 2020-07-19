@@ -54,3 +54,19 @@ span.value {
     height: 100%;
     background: rgba(0, 0, 0, 0.6);
 }
+
+.footer-button {
+    position: fixed;
+    bottom: 0;
+    padding: 4%;
+    width: 92%;
+    z-index: 10;
+    background: #fff;
+    text-align: center;
+}
+
+.footer-button button {
+    width: 100%;
+    background-color: #af1a1a;
+    color: #fff;
+}

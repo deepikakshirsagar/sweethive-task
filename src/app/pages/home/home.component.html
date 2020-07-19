@@ -1,5 +1,5 @@
 <div class="home-page">
-    <div class="wrapper">
+    <div [ngClass.gt-xs]="'wrapper'">
         <div class="banner-section" fxLayout="column" [fxLayout.gt-xs]="'row'" [ngStyle.sm]="{position: 'relative'}">
             
             <img src="assets/images/course-image.png" alt="Course" fxFlex="100" [fxFlex.gt-sm]="'70'" />
@@ -21,14 +21,14 @@
                             <span class="value">{{duration}} HRS</span>
                         </li>
                     </ul>
-                    <button mat-raised-button>Iscriviti</button>
-                    <p fxShow [fxHide.xs]="true">Paga con Carta di Credito o Bonifico Online. Hai un voucher?</p>
+                    <button fxShow [fxHide.xs]="true" mat-raised-button>Iscriviti</button>
+                    <p fxShow [fxHide.xs]="true" [ngClass.gt-xs]="'mb-0'">Paga con Carta di Credito o Bonifico Online. Hai un voucher?</p>
                 </div>
             </div>
         </div>
 
-        <div class="content" fxLayout fxLayout.md="column">
-            <div fxFlex="70" fxFlex.md="100" fxLayoutGap="15px" fLayoutGap.xs="0">
+        <div class="content" fxLayout [fxLayout.lt-sm]="'column-reverse'">
+            <div fxFlex="100" [fxFlex.gt-sm]="70" fxLayoutGap="15px" fLayoutGap.xs="0">
                 <div>
                     <h2>Descrizione</h2>
                     <h3 class="mb-0">Influencing Without Authority</h3>
@@ -59,6 +59,10 @@
                     <span class="address">Via Larga 8, 20122 Milano, Lombardia, Italy</span>
                 </div>
             </div>
+        </div>
+
+        <div fxHide [fxShow.xs]="true" class="footer-button box-shadow">
+            <button mat-raised-button>Iscriviti</button>
         </div>
     </div>
 </div>
