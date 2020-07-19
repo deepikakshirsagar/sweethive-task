@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  languageList = [
+    {value: 'Italiano', code: 'it'},
+    {value: 'English', code: 'en'}
+  ];
 
   constructor() { }
 

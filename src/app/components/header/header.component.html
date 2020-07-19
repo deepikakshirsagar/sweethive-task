@@ -10,9 +10,14 @@
                 <a mat-button [routerLink]="'/home'" routerLinkActive="active"> Home </a>
                 <a mat-button [routerLink]="'/test'"> Registrati </a>
                 <a mat-button [routerLink]="'/test'"> Accedi </a>
-                <!-- <a mat-button [routerLink]="'/create-contact'"> Create Contact </a>
-                    <a mat-button [routerLink]="'/activities'"> Activities </a>
-                    <a mat-button [routerLink]="'/create-activity'"> Create Activity </a>       -->
+                
+                <mat-form-field>
+                    <mat-select>
+                      <mat-option *ngFor="let lang of languageList" [value]="lang.code">
+                        {{lang.value}}
+                      </mat-option>
+                    </mat-select>
+                </mat-form-field>
                 </div>
                 
                 <button class="menu-icon" mat-icon-button>

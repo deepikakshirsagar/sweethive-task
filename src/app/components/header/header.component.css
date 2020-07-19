@@ -19,3 +19,8 @@ header {
 .menu-icon {
     display: none;
 }
+
+.active {
+    border: 1px solid #000;
+    border-radius: 25px;
+}
