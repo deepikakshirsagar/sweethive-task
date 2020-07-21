@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-subscribe',
@@ -10,10 +11,20 @@ export class SubscribeComponent implements OnInit {
   duration = 3;
   fromDate = '04.09.2019';
   toDate = '11.09.2019';
+  numberOfParti: number = 10;
+  validVoucherCode = ['xcvfr', 'bn674', '09oiu', 'gh6tf'];
+
+  voucherCode = new FormControl('', [Validators.required,
+    Validators.minLength(5)]);
+
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  apply() {
+
   }
 
 }
