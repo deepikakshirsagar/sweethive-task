@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators, AbstractControl } from '@angular/forms';
 
 @Component({
   selector: 'app-subscribe',
@@ -8,23 +8,41 @@ import { FormControl, Validators } from '@angular/forms';
 })
 export class SubscribeComponent implements OnInit {
   price: number = 133;
+  displayPrice: number;
   duration = 3;
   fromDate = '04.09.2019';
   toDate = '11.09.2019';
   numberOfParti: number = 10;
-  validVoucherCode = ['xcvfr', 'bn674', '09oiu', 'gh6tf'];
+  validVoucherCode = ['xcvfr', 'bn674', '09oiu', 'gh6tf']; // list of vlalid codes
+  isCodeValid: boolean;
 
-  voucherCode = new FormControl('', [Validators.required,
-    Validators.minLength(5)]);
+  subscribeForm = new FormGroup({
+    voucherCode: new FormControl('', [Validators.required, Validators.minLength(5)]),
+    checkbox: new FormControl(''),
+    partiNumber: new FormControl('1')
+  })
 
+  get f() { return this.subscribeForm.controls; }
 
   constructor() { }
 
   ngOnInit(): void {
+    this.displayPrice = this.price;
   }
 
   apply() {
-
+    let code = this.subscribeForm.value.voucherCode;
+    if(this.validVoucherCode.includes(code)) {
+      this.isCodeValid = true;
+    } else {
+      this.isCodeValid = false;
+    }
   }
+
+  getNumberParticipant() {
+    let num = this.subscribeForm.value.partiNumber;
+    this.displayPrice = this.price * num;
+  }
+
 
 }

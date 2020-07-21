@@ -15,7 +15,7 @@
                     <ul class="p-0" fxLayout>
                         <li>
                             <span class="label">DA: </span>
-                            <span class="value">{{price | currency: 'EUR':'symbol'}}</span>
+                            <span class="value">{{displayPrice | currency: 'EUR':'symbol'}}</span>
                         </li>
                         <li>
                             <span class="label">Durata: </span>
@@ -32,6 +32,7 @@
                 <h6>ORGANIZZATO DA:</h6>
                 <p>Berlitz Language Centers S.r.l.</p>
             </div>
+            <mat-divider></mat-divider>
 
             <div>
                 <h6>DATA</h6>
@@ -39,8 +40,9 @@
                 <p>{{duration}} Hours</p>
                 <span >Mostra Date</span>
             </div>
+            <mat-divider></mat-divider>
 
-            <form>
+            <form [formGroup]="subscribeForm">
             <div>
                 <div>
                     <div>
@@ -49,34 +51,35 @@
                     </div>
                     <div>
                         <h6>CODICE SCONTO/VOUCHER</h6>
-                        <mat-form-field appearance="fill">
-                            <input matInput placeholder="Code" [formControl]="voucherCode" required>
+                        <mat-form-field>
+                            <input matInput type="text" formControlName="voucherCode" />
+                            <mat-hint *ngIf="isCodeValid">Code applied</mat-hint>
+                            <mat-error *ngIf="!isCodeValid">
+                                Code is not valid
+                            </mat-error>
                         </mat-form-field>
 
-                        <mat-form-field>
-                            <button mat-raised-button (click)="apply()">Applica</button>
-                        </mat-form-field>
+                        <button mat-raised-button (click)="apply()">Applica</button>
                     </div>
                 </div>
 
                 <div>
                     <div>
                         <h6>PARTECIPANTI</h6>
-                        <!-- <mat-form-field>
-                            <mat-checkbox  >L'iscrizione è per me</mat-checkbox>
-                        </mat-form-field> -->
+                        <mat-checkbox formControlName="checkbox" >L'iscrizione è per me</mat-checkbox>
+                        
                     </div>
 
-                    <!-- <div>
-                        <mat-form-field appearance="fill">
+                    <div>
+                        <mat-form-field>
                             <mat-label>Numero di Partecipanti</mat-label>
-                            <mat-select>
-                              <mat-option *ngFor="let n of [].constructor(10); let i = index" [value]="i">
+                            <mat-select formControlName="partiNumber" (selectionChange)="getNumberParticipant()">
+                              <mat-option *ngFor="let n of [].constructor(10); let i = index" [value]="i+1">
                                 {{i+1}}
                               </mat-option>
                             </mat-select>
                           </mat-form-field>
-                    </div> -->
+                    </div>
                     
                 </div>
                 
