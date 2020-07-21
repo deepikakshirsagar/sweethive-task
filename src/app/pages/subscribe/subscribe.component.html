@@ -29,22 +29,22 @@
 
         <div class="content">
             <div>
-                <h6>ORGANIZZATO DA:</h6>
+                <h6 class="mb-0">ORGANIZZATO DA:</h6>
                 <p>Berlitz Language Centers S.r.l.</p>
             </div>
             <mat-divider></mat-divider>
 
             <div>
-                <h6>DATA</h6>
+                <h6 class="mb-0">DATA</h6>
                 <p>dal {{fromDate}} al {{toDate}}</p>
                 <p>{{duration}} Hours</p>
-                <span >Mostra Date</span>
+                <p [ngStyle]="{color: '#af1a1a'}">Mostra Date</p>
             </div>
             <mat-divider></mat-divider>
 
             <form [formGroup]="subscribeForm">
-            <div>
-                <div>
+            <div fxLayout [fxLayout.lt-sm]="'column-reverse'">
+                <div fxLayout fxLayoutGap="50px" fxFlex="60" >
                     <div>
                         <h6>PREZZO</h6>
                         <p>{{price | currency: 'EUR': 'symbol'}} (IVA Inclusa)</p>
@@ -63,7 +63,7 @@
                     </div>
                 </div>
 
-                <div>
+                <div >
                     <div>
                         <h6>PARTECIPANTI</h6>
                         <mat-checkbox formControlName="checkbox" >L'iscrizione è per me</mat-checkbox>
