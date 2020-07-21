@@ -6,7 +6,7 @@
             
                 <a class="logo" mat-button [routerLink]="'/'"><img src="assets/images/wiredexperience.png" alt="Wired Experience" /></a>
                 
-                <div class="menu-list" fxShow [fxHide.gt-md]="true">
+                <div class="menu-list" fxShow [fxHide.lt-md]="true">
                 <a mat-button [routerLink]="'/home'" routerLinkActive="active"> Home </a>
                 <a mat-button [routerLink]=""> Registrati </a>
                 <a mat-button [routerLink]=""> Accedi </a>
@@ -20,8 +20,8 @@
                 </mat-form-field>
                 </div>
                 
-                <button fxHide [fxShow.gt-md]="true" class="menu-icon" mat-icon-button>
-                    <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+                <button mat-icon-button fxHide [fxShow.lt-md]="true" class="menu-icon" >
+                    <mat-icon (click)="onToggleSidenav()">menu</mat-icon>
                 </button>
         
             </mat-toolbar-row>
@@ -29,7 +29,7 @@
             
     </mat-toolbar>
         
-        <mat-sidenav-container>
+        <!-- <mat-sidenav-container>
             <mat-sidenav #sidenav>
                 <mat-nav-list>
 
@@ -42,13 +42,12 @@
                     
                 </mat-nav-list>
             </mat-sidenav>
-            <!-- <mat-sidenav-content>
+            <mat-sidenav-content>
             <div style="height: 88vh;">
-                
-                <router-outlet></router-outlet>
+               
             </div>
-            </mat-sidenav-content> -->
-        </mat-sidenav-container>
+            </mat-sidenav-content>
+        </mat-sidenav-container> -->
     
 </header>
   

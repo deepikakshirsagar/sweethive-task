@@ -15,10 +15,10 @@ header {
 .menu-list a {
     text-transform: uppercase;
 }
-
+/* 
 .menu-icon {
     display: none;
-}
+} */
 
 .active {
     border: 1px solid #000;

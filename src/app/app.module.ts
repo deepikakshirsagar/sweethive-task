@@ -11,13 +11,15 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 import { SubscribeComponent } from './pages/subscribe/subscribe.component';
+import { SidenavListComponent } from './components/sidenav-list/sidenav-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    SubscribeComponent
+    SubscribeComponent,
+    SidenavListComponent
   ],
   imports: [
     BrowserModule,
