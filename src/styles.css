@@ -49,6 +49,12 @@ button .mat-raised-button {
     padding-top: 64px;
 }
 
+h1 {
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
 h2 {
     color: #af1a1a;
 }
