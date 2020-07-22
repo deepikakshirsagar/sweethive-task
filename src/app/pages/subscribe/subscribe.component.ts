@@ -13,7 +13,7 @@ export class SubscribeComponent implements OnInit {
   fromDate = '04.09.2019';
   toDate = '11.09.2019';
   numberOfParti: number = 10;
-  validVoucherCode = ['xcvfr', 'bn674', '09oiu', 'gh6tf']; // list of vlalid codes
+  validVoucherCode = ['abcde', '12345', 'xcvfr', 'bn674', '09oiu', 'gh6tf']; // list of vlalid codes
   isCodeValid: boolean;
 
   subscribeForm = new FormGroup({
@@ -34,6 +34,8 @@ export class SubscribeComponent implements OnInit {
     let code = this.subscribeForm.value.voucherCode;
     if(this.validVoucherCode.includes(code)) {
       this.isCodeValid = true;
+      this.price = this.price/2;
+      this.getNumberParticipant();
     } else {
       this.isCodeValid = false;
     }

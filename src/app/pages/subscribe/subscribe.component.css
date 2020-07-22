@@ -10,6 +10,10 @@
     color: #fff;
 }
 
+.bottom-section ul li {
+    color: #af1a1a;
+}
+
 /* form div:first-child {
     justify-content: space-evenly;
 } */

@@ -14,12 +14,19 @@
                 <div class="bottom-section" fxLayout="column" fxFlexAlign="end" [ngStyle.gt-xs]="{position: 'absolute'}">
                     <ul class="p-0" fxLayout>
                         <li>
+                            <span class="label">dal {{fromDate}} al {{toDate}}</span>
+                        </li>
+                        <li>
                             <span class="label">DA: </span>
-                            <span class="value">{{displayPrice | currency: 'EUR':'symbol'}}</span>
+                            <span class="value"><strong>{{displayPrice | currency: 'EUR':'symbol'}}</strong></span>
                         </li>
                         <li>
                             <span class="label">Durata: </span>
                             <span class="value">{{duration}} HRS</span>
+                        </li>
+                        <li>
+                            <span class="label">Partecipanti </span>
+                            <span class="value">{{subscribeForm.value.partiNumber}}</span>
                         </li>
                     </ul>
                     
@@ -74,7 +81,7 @@
                         <mat-form-field>
                             <mat-label>Numero di Partecipanti</mat-label>
                             <mat-select formControlName="partiNumber" (selectionChange)="getNumberParticipant()">
-                              <mat-option *ngFor="let n of [].constructor(10); let i = index" [value]="i+1">
+                              <mat-option *ngFor="let n of [].constructor(10); let i = index" [value]="i+1" [selected]="subscribeForm.value.partiNumber == i+1">
                                 {{i+1}}
                               </mat-option>
                             </mat-select>
