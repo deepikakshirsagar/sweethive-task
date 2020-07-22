@@ -28,6 +28,7 @@ export class SubscribeComponent implements OnInit {
 
   ngOnInit(): void {
     this.displayPrice = this.price;
+    this.subscribeForm.get('partiNumber').setValue(1);
   }
 
   apply() {
