@@ -1,33 +1,34 @@
 <header class="box-shadow">
-    
-    <mat-toolbar color="primary">
-        <div class="wrapper">
-            <mat-toolbar-row fxLayout="row" fxLayoutAlign="space-between center">
+    <mat-toolbar-row>
+        <mat-toolbar color="primary" multiple>
+            <div class="wrapper">
+                <div fxLayout="row" fxLayoutAlign="space-between center">
+                
+                    <a class="logo" mat-button [routerLink]="'/'"><img src="assets/images/wiredexperience.png" alt="Wired Experience" /></a>
+                    
+                    <div class="menu-list" fxShow [fxHide.lt-md]="true">
+                    <a mat-button [routerLink]="'/home'" routerLinkActive="active"> Home </a>
+                    <a mat-button [routerLink]=""> Registrati </a>
+                    <a mat-button [routerLink]=""> Accedi </a>
+                    
+                    <mat-form-field>
+                        <mat-select>
+                        <mat-option *ngFor="let lang of languageList" [value]="lang.code">
+                            {{lang.value}}
+                        </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    </div>
+                    
+                    <button mat-icon-button fxHide [fxShow.lt-md]="true" class="menu-icon" >
+                        <mat-icon (click)="onToggleSidenav()">menu</mat-icon>
+                    </button>
             
-                <a class="logo" mat-button [routerLink]="'/'"><img src="assets/images/wiredexperience.png" alt="Wired Experience" /></a>
-                
-                <div class="menu-list" fxShow [fxHide.lt-md]="true">
-                <a mat-button [routerLink]="'/home'" routerLinkActive="active"> Home </a>
-                <a mat-button [routerLink]=""> Registrati </a>
-                <a mat-button [routerLink]=""> Accedi </a>
-                
-                <mat-form-field>
-                    <mat-select>
-                      <mat-option *ngFor="let lang of languageList" [value]="lang.code">
-                        {{lang.value}}
-                      </mat-option>
-                    </mat-select>
-                </mat-form-field>
                 </div>
+            </div>
                 
-                <button mat-icon-button fxHide [fxShow.lt-md]="true" class="menu-icon" >
-                    <mat-icon (click)="onToggleSidenav()">menu</mat-icon>
-                </button>
-        
-            </mat-toolbar-row>
-        </div>
-            
-    </mat-toolbar>
+        </mat-toolbar>
+    </mat-toolbar-row>
     
 </header>
   
