@@ -78,9 +78,4 @@ h6 {
     padding: 15px;
 }
 
-.positioned-details-section {
-    position: absolute;
-    right: 0;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-}
+

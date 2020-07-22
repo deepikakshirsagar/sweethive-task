@@ -1,15 +1,14 @@
 
   <mat-sidenav-container>
-    <mat-sidenav #sidenav role="navigation">
-      <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
+    <!-- <mat-sidenav #sidenav role="navigation"> -->
+      <!-- <app-header (sidenavToggle)="sidenav.toggle()"></app-header> -->
+    <!-- </mat-sidenav> -->
+    <mat-sidenav #sidenav role="navigation" position="end">
+      <app-sidenav-list (sidenavClose)="sidenav.close()"></app-sidenav-list>
     </mat-sidenav>
     <mat-sidenav-content>
       <!--in here all the content must reside. We will add a navigation header as well-->
       <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
-
-      <mat-sidenav #sidenav role="navigation">
-        <app-sidenav-list (sidenavClose)="sidenav.close()"></app-sidenav-list>
-      </mat-sidenav>
       <main>
         <router-outlet></router-outlet>
       </main>
